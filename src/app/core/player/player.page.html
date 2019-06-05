@@ -1,0 +1,39 @@
+<div>
+    <ion-header id="player-header">
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-back-button></ion-back-button>
+            </ion-buttons>
+            <ion-title>My Navigation Bar</ion-title>
+        </ion-toolbar>
+    </ion-header>
+<youtube-player *ngIf="id"
+        class="playerin"
+        id="playerin"
+        [videoId]="id"
+        (ready)="savePlayer($event)"
+        (change)="onStateChange($event)"
+        (error)="showError()"
+        [playerVars]="playerVars"
+        [height]="height"
+        [width]="width">
+</youtube-player>
+    <ion-item (ionChange)="setSpeedOfVideo($event)" style="display: none">
+        <ion-label>Playback speed</ion-label>
+        <ion-select #select interface="popover">
+            <ion-select-option value="0.25">0.25</ion-select-option>
+            <ion-select-option value="0.5">0.5</ion-select-option>
+            <ion-select-option value="0.75">0.75</ion-select-option>
+            <ion-select-option selected value="1">1</ion-select-option>
+            <ion-select-option value="1.25">1.25</ion-select-option>
+            <ion-select-option value="1.5">1.5</ion-select-option>
+            <ion-select-option value="2">2</ion-select-option>
+        </ion-select>
+    </ion-item>
+<ion-icon (click)="openActionMenu()"  id="action-menu-btn" color="warning" size="large" class="action-menu-btn" name="settings"></ion-icon>
+
+<div class="playback-speed-menu">
+
+</div>
+
+</div>

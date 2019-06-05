@@ -1,0 +1,64 @@
+.toolbar-background {
+  background: black!important;
+}
+.icon-back {
+  height: 50px;
+}
+
+
+.input-checkbox {
+  display: none;
+}
+.label-checkbox {
+  padding: 3vh 30vw;
+  background: black;
+  border: 1px solid yellow;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+}
+
+.one-of-lang-to-learn {
+  padding: 20px;
+  background: black;
+  color: white;
+  width: 80vw;
+  text-align: center;
+  margin: 2vh 8vw;
+  border: 2px solid yellow;
+  border-radius: 40px;
+  font-size: larger;
+}
+
+.one-of-lang-to-learn-chose {
+  padding: 20px;
+  background: yellow;
+  color: black;
+  width: 80vw;
+  text-align: center;
+  margin: 2vh 8vw;
+  border: 2px solid yellow;
+  border-radius: 40px;
+  font-size: larger;
+}
+
+.button-next {
+  padding: 20px;
+  background: yellow;
+  color: black;
+  width: 80vw;
+  margin: 2vh 8vw;
+  border: 2px solid yellow;
+  border-radius: 40px;
+  font-size: larger;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+.grid-block {
+  padding: 5vh 0 3vh;
+}
+
+.text-header {
+  color: yellow;
+}

@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-grid>
+
+      <ion-row>
+        <ion-col>
+          <img class="icon-back" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgc3R5bGU9IiI+PHJlY3QgaWQ9ImJhY2tncm91bmRyZWN0IiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4PSIwIiB5PSIwIiBmaWxsPSJub25lIiBzdHJva2U9Im5vbmUiLz48ZyBjbGFzcz0iY3VycmVudExheWVyIiBzdHlsZT0iIj48dGl0bGU+TGF5ZXIgMTwvdGl0bGU+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgaWQ9InN2Z18xIi8+PHBhdGggZD0iTTIxIDExSDYuODNsMy41OC0zLjU5TDkgNmwtNiA2IDYgNiAxLjQxLTEuNDFMNi44MyAxM0gyMXoiIGlkPSJzdmdfMiIgY2xhc3M9InNlbGVjdGVkIiBvcGFjaXR5PSIxIiBzdHJva2U9Im5vbmUiIGZpbGw9IiNmZmZmMDAiIGZpbGwtb3BhY2l0eT0iMSIvPjwvZz48L3N2Zz4=" alt="">
+        </ion-col>
+        <ion-col size="10">
+            <p class="text-header">{{iSpeak}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-grid class="grid-block">
+
+    <ion-row>
+      <ion-col>
+        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
+          I want to learn French
+          </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
+          I want to learn Arabic
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
+          I want to learn German
+         </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
+          I want to learn Russian
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
+          I want to learn Spanish
+        </div>
+      </ion-col>
+    </ion-row><ion-row>
+      <ion-col>
+        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
+          I want to learn Spanish
+        </div>
+      </ion-col>
+    </ion-row><ion-row>
+      <ion-col>
+        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
+          I want to learn Spanish
+        </div>
+      </ion-col>
+    </ion-row><ion-row>
+      <ion-col>
+        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
+          I want to learn Spanish
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="button-next" (click)="goToNextPage()">
+          NEXT
+        </div>
+      </ion-col>
+    </ion-row>
+
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

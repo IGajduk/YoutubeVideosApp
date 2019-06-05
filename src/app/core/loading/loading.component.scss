@@ -1,0 +1,13 @@
+#loaderBlock {
+  height: 120vh;
+  width: 120vw;
+  position: absolute;
+  z-index: 99999;
+  top: -10vh;
+  left: -10vw;
+  background: black;
+  display: flex;
+}
+#spinner {
+  margin: auto;
+}

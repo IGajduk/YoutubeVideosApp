@@ -1,0 +1,26 @@
+body {
+  background: black;
+}
+.playerin {
+  //display: none;
+}
+
+.action-menu-btn {
+  display: none;
+}
+@media (orientation: landscape) {
+
+  .action-menu-btn {
+    position: relative;
+    bottom: 79vh;
+    left: 90vw;
+  }
+}
+
+@media (orientation: portrait) {
+  .action-menu-btn {
+    position: relative;
+    bottom: 85vh;
+    left: 81vw;
+  }
+}

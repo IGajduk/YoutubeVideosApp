@@ -3,7 +3,6 @@ import {LanguagesISpeakComponent} from '../core/languages-i-speak/languages-i-sp
 import {LoadingService} from '../services/loading.service';
 import {BeyApiService} from '../services/bey-api.service';
 import {PlaylistBeyApi} from '../models/PlaylistBeyApi';
-import {forEach} from '@angular-devkit/schematics';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +15,6 @@ export class HomePage implements OnInit {
   textHeaderMain = 'Language Learning Simplified';
   textUnderHeaderText = 'Famous people as teachers and movie scenes as lessons!';
   textBtnUnderHeaderText = 'I SPEAK ENGLISH';
-
 
 constructor(
     private loadingService: LoadingService,

@@ -1,0 +1,133 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            <div>
+              <img class="logo-img" src="https://bey.academy/wp-content/uploads/2019/04/WhatsApp-Image-2019-04-16-at-9.19.00-AM_burned.png">
+            </div>
+        </ion-col>
+
+        <ion-col>
+          <div class="social-networks-block">
+            <div>
+              <ion-button color="dark" size="small"><ion-icon class="icons-header" size="large" name="logo-instagram"></ion-icon></ion-button>
+            </div>
+            <div>
+              <ion-button color="dark" size="small"><ion-icon class="icons-header" size="large" name="logo-youtube"></ion-icon></ion-button>
+            </div>
+            <div>
+              <ion-button color="dark" size="small"><ion-icon class="icons-header" size="large" name="logo-facebook"></ion-icon></ion-button>
+            </div>
+          </div>
+
+        </ion-col>
+        <ion-col>
+          <div class="filter-btn">
+            <ion-button color="dark" size="small"><ion-icon class="icons-header" size="large" name="funnel"></ion-icon></ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <div *ngIf="data">
+
+    <div class="fake-video-block" *ngFor="let videoObj of videosToShow">
+      <div class="fake-block">
+        <img *ngIf="videoObj.items[0].snippet.thumbnails.high" [src]="videoObj.items[0].snippet.thumbnails.high.url" (click)="openVideo(videoObj.items[0].id)">
+      </div>
+      <ion-label>
+        <h3 class="pad-top-5" (click)="openVideo(videoObj.items[0].id)">
+          {{videoObj.items[0].snippet.title}}
+        </h3>
+        <p class="pad-top-5"  (click)="openVideo(videoObj.items[0].id)">
+          {{videoObj.items[0].snippet.publishedAt}}
+        </p>
+      </ion-label>
+    </div>
+
+  </div>
+
+
+
+
+  <div *ngIf="!data">
+      <div class="fake-video-block">
+        <div class="fake-block">
+          <ion-spinner class="image-spinner" name="circles" color="dark"></ion-spinner>
+        </div>
+        <ion-label>
+          <h3 class="pad-top-5">
+            <ion-skeleton-text class="skeleton-fake-text" animated style="width: 80%"></ion-skeleton-text>
+          </h3>
+          <p class="pad-top-5">
+            <ion-skeleton-text class="skeleton-fake-text" animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </div>
+
+      <div class="fake-video-block">
+        <div class="fake-block">
+          <ion-spinner class="image-spinner" name="circles" color="dark"></ion-spinner>
+        </div>
+        <ion-label>
+          <h3 class="pad-top-5">
+            <ion-skeleton-text class="skeleton-fake-text" animated style="width: 80%"></ion-skeleton-text>
+          </h3>
+          <p class="pad-top-5">
+            <ion-skeleton-text class="skeleton-fake-text" animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </div>
+
+      <div class="fake-video-block">
+        <div class="fake-block">
+          <ion-spinner class="image-spinner" name="circles" color="dark"></ion-spinner>
+        </div>
+        <ion-label>
+          <h3 class="pad-top-5">
+            <ion-skeleton-text class="skeleton-fake-text" animated style="width: 80%"></ion-skeleton-text>
+          </h3>
+          <p class="pad-top-5">
+            <ion-skeleton-text class="skeleton-fake-text" animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </div>
+
+      <div class="fake-video-block">
+        <div class="fake-block">
+          <ion-spinner class="image-spinner" name="circles" color="dark"></ion-spinner>
+        </div>
+        <ion-label>
+          <h3 class="pad-top-5">
+            <ion-skeleton-text class="skeleton-fake-text" animated style="width: 80%"></ion-skeleton-text>
+          </h3>
+          <p class="pad-top-5">
+            <ion-skeleton-text class="skeleton-fake-text" animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </div>
+
+      <div class="fake-video-block">
+        <div class="fake-block">
+          <ion-spinner class="image-spinner" name="circles" color="dark"></ion-spinner>
+        </div>
+        <ion-label>
+          <h3 class="pad-top-5">
+            <ion-skeleton-text class="skeleton-fake-text" animated style="width: 80%"></ion-skeleton-text>
+          </h3>
+          <p class="pad-top-5">
+            <ion-skeleton-text class="skeleton-fake-text" animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </div>
+</div>
+
+
+</ion-content>
