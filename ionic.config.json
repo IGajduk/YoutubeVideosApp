@@ -1,5 +1,7 @@
 {
   "name": "BeyAcademyApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

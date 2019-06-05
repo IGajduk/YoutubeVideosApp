@@ -9,3 +9,54 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+//@import '~@ionic/angular/css/pickerMyStyle.css';// css of languages-i-speak.component
+
+.picker-wrapper {
+  height: 100vh!important;
+  //background: yellow!important;
+  background-image: linear-gradient(black, black, #2e2e2e)!important;
+  opacity: 0.5%!important;
+}
+
+.picker-columns {
+  height: 100vh!important;
+}
+
+.picker-col {
+  padding-top: 30vh;
+  height: 100vh!important;
+}
+.picker-toolbar {
+  position: absolute;
+  top: 85vh;
+  width: 100vw!important;
+  height: 50px!important;
+  padding: 0 5vw;
+}
+.picker-button {
+  color: black!important;
+  background: yellow!important;
+  width: 90vw;
+  height: 50px!important;
+  border-radius: 20px;
+  font-size: large!important;
+}
+.picker-opt {
+  color:#504f4f;
+}
+.picker-opt-selected {
+  color: yellow!important;
+  border-radius: 20px;
+}
+.picker-col::after {
+  content: "CHOOSE YOUR LANGUAGE"; /* Добавляемый текст */
+  padding: 10vh 5vw 5vh;
+  font-size: x-large;
+  color: yellow;
+  position: absolute;
+  top: 0;
+  width: 90vw!important;
+  left: 0;
+  text-align: center;
+  background-image: linear-gradient(#2e2e2e, black)!important;
+}

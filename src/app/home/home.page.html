@@ -1,14 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="main">
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <img class="logo" src="assets/images/logo.png" class="logo"/>
+
+  <div class="centre-page">
+    <h1 class="h1-main">
+      {{textHeaderMain}}
+    </h1>
+    <div class="under-main-btn flip-scale-up-hor" (click)="showLanguagesMenu()"><span>{{textBtnUnderHeaderText}} </span><ion-icon name="arrow-dropdown" class="icon-choose-lang"></ion-icon></div>
+    <p class="under-main-txt">{{textUnderHeaderText}}</p>
   </div>
-</ion-content>
+</div>
+
+    <app-languages-i-speak #languagesISpeak></app-languages-i-speak>
+

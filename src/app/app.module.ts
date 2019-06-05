@@ -8,11 +8,15 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { IframeTrackerDirective } from './directivs/iframe-tracker.directive';
+import {HttpClientModule} from '@angular/common/http';
+import {IonicStorageModule} from '@ionic/storage';
+import {LoadingPageModule} from './core/loading/loading.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, IframeTrackerDirective],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, IonicStorageModule.forRoot(), LoadingPageModule],
   providers: [
     StatusBar,
     SplashScreen,
