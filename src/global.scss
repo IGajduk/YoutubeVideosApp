@@ -48,8 +48,8 @@
   color: yellow!important;
   border-radius: 20px;
 }
-.picker-col::after {
-  content: "CHOOSE YOUR LANGUAGE"; /* Добавляемый текст */
+.picker-columns::after {
+  content: attr(data-content); /* Добавляемый текст */
   padding: 10vh 5vw 5vh;
   font-size: x-large;
   color: yellow;

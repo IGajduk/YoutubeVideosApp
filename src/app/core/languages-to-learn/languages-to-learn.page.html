@@ -4,7 +4,7 @@
 
       <ion-row>
         <ion-col>
-          <img class="icon-back" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgc3R5bGU9IiI+PHJlY3QgaWQ9ImJhY2tncm91bmRyZWN0IiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4PSIwIiB5PSIwIiBmaWxsPSJub25lIiBzdHJva2U9Im5vbmUiLz48ZyBjbGFzcz0iY3VycmVudExheWVyIiBzdHlsZT0iIj48dGl0bGU+TGF5ZXIgMTwvdGl0bGU+PHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIgaWQ9InN2Z18xIi8+PHBhdGggZD0iTTIxIDExSDYuODNsMy41OC0zLjU5TDkgNmwtNiA2IDYgNiAxLjQxLTEuNDFMNi44MyAxM0gyMXoiIGlkPSJzdmdfMiIgY2xhc3M9InNlbGVjdGVkIiBvcGFjaXR5PSIxIiBzdHJva2U9Im5vbmUiIGZpbGw9IiNmZmZmMDAiIGZpbGwtb3BhY2l0eT0iMSIvPjwvZz48L3N2Zz4=" alt="">
+          <ion-icon size="large" color="warning" name="arrow-back" (click)="goBack()"></ion-icon>
         </ion-col>
         <ion-col size="10">
             <p class="text-header">{{iSpeak}}</p>
@@ -17,59 +17,59 @@
 <ion-content color="dark">
   <ion-grid class="grid-block">
 
-    <ion-row>
+    <ion-row *ngFor="let lang of languagesToLearn">
       <ion-col>
         <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
-          I want to learn French
+          {{lang.name}}
           </div>
       </ion-col>
     </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
-          I want to learn Arabic
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
-          I want to learn German
-         </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
-          I want to learn Russian
-        </div>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
-          I want to learn Spanish
-        </div>
-      </ion-col>
-    </ion-row><ion-row>
-      <ion-col>
-        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
-          I want to learn Spanish
-        </div>
-      </ion-col>
-    </ion-row><ion-row>
-      <ion-col>
-        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
-          I want to learn Spanish
-        </div>
-      </ion-col>
-    </ion-row><ion-row>
-      <ion-col>
-        <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
-          I want to learn Spanish
-        </div>
-      </ion-col>
-    </ion-row>
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<div class="one-of-lang-to-learn" (click)="oneLangClick($event)">-->
+          <!--I want to learn Arabic-->
+        <!--</div>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<div class="one-of-lang-to-learn" (click)="oneLangClick($event)">-->
+          <!--I want to learn German-->
+         <!--</div>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<div class="one-of-lang-to-learn" (click)="oneLangClick($event)">-->
+          <!--I want to learn Russian-->
+        <!--</div>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<div class="one-of-lang-to-learn" (click)="oneLangClick($event)">-->
+          <!--I want to learn Spanish-->
+        <!--</div>-->
+      <!--</ion-col>-->
+    <!--</ion-row><ion-row>-->
+      <!--<ion-col>-->
+        <!--<div class="one-of-lang-to-learn" (click)="oneLangClick($event)">-->
+          <!--I want to learn Spanish-->
+        <!--</div>-->
+      <!--</ion-col>-->
+    <!--</ion-row><ion-row>-->
+      <!--<ion-col>-->
+        <!--<div class="one-of-lang-to-learn" (click)="oneLangClick($event)">-->
+          <!--I want to learn Spanish-->
+        <!--</div>-->
+      <!--</ion-col>-->
+    <!--</ion-row><ion-row>-->
+      <!--<ion-col>-->
+        <!--<div class="one-of-lang-to-learn" (click)="oneLangClick($event)">-->
+          <!--I want to learn Spanish-->
+        <!--</div>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
 
   </ion-grid>
 </ion-content>
