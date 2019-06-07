@@ -1,17 +1,19 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {LanguagesISpeakComponent} from '../core/languages-i-speak/languages-i-speak.component';
 import {LoadingService} from '../services/loading.service';
 import {BeyApiService} from '../services/bey-api.service';
 import {PlaylistBeyApi} from '../models/PlaylistBeyApi';
 import {CategoriesAndFiltersBeyApi} from '../models/CategoriesAndFiltersBeyApi';
 import { Storage } from '@ionic/storage';
+import {DataBetweenComponentsService} from '../services/data-between-components.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage implements OnInit, OnDestroy {
   @ViewChild('languagesISpeak') languagesISpeak: LanguagesISpeakComponent;
 
   textHeaderMain = 'Language Learning Simplified';
@@ -21,17 +23,22 @@ export class HomePage implements OnInit {
 constructor(
     private loadingService: LoadingService,
     private beyApiService: BeyApiService,
-    private storage: Storage
+    private storage: Storage,
+    private dataBetweenComponentsService: DataBetweenComponentsService,
+    private menu: MenuController
 ) {
 }
 ngOnInit(): void {
   this.getLang();
+  this.dataBetweenComponentsService.textForFirstPage.subscribe((res) => {
+    this.textBtnUnderHeaderText = res;
+  });
   this.storage.get('languageISpeakText').then((name) => {
-      if (name === null) {
-      } else {
-        this.textBtnUnderHeaderText = name;
-      }
-      }
+        if (name === null) {
+        } else {
+          this.textBtnUnderHeaderText = name;
+        }
+  }
   );
   // this.storage.set('langISpeak', 'en').then((rs) => {
   //   console.log(rs, 'set');
@@ -69,5 +76,57 @@ getLang() {
 
   showLanguagesMenu() {
     this.languagesISpeak.openPickerISpeak();
+  }
+
+
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
+    console.log('custom');
+  }
+  openToggle() {
+    this.menu.get().then(res => {
+      console.log(res);
+    });
+    // this.menu.open('menuid');
+    console.log('toggle');
+  }
+
+  openEnd() {
+    this.menu.open('end');
+  }
+
+  openCustom() {
+    this.menu.enable(true, 'custom');
+    this.menu.open('custom');
+    console.log('first');
+  }
+
+  ionViewDidLoad() {
+  console.log('ionViewDidLoad');
+  }
+  ionViewWillEnter() {
+  console.log('ionViewWillEnter');
+  }
+  ionViewDidEnter() {
+  console.log('ionViewDidEnter');
+  }
+  ionViewWillLeave() {
+  console.log('ionViewWillLeave');
+  }
+  ionViewDidLeave() {
+  console.log('ionViewDidLeave');
+  }
+  ionViewWillUnload() {
+  console.log('ionViewWillUnload');
+  }
+  ionViewCanEnter() {
+  console.log('ionViewCanEnter');
+  }
+  ionViewCanLeave() {
+  console.log('ionViewCanLeave');
+  }
+  ngOnDestroy() {
+    console.log('destroy');
   }
 }

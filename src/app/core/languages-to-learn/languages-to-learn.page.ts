@@ -36,6 +36,7 @@ export class LanguagesToLearnPage implements OnInit {
     window.history.back();
   }
   oneLangClick(event) {
+    console.log(event.target.children[0].value);
     const eTarList = event.target.classList;
     if (eTarList.contains('one-of-lang-to-learn')) {
       if (eTarList.contains('one-of-lang-to-learn-chose')) {

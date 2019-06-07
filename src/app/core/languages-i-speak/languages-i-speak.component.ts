@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import { Storage } from '@ionic/storage';
 import {BeyApiService} from '../../services/bey-api.service';
 import {LoadingService} from '../../services/loading.service';
+import {DataBetweenComponentsService} from '../../services/data-between-components.service';
 
 @Component({
   selector: 'app-languages-i-speak',
@@ -80,6 +81,7 @@ export class LanguagesISpeakComponent implements OnInit {
       private rend: Renderer2,
       private beyApiService: BeyApiService,
       private loadService: LoadingService,
+      private dataBetweenCompService: DataBetweenComponentsService
   ) { }
 
   ngOnInit() {
@@ -122,7 +124,7 @@ export class LanguagesISpeakComponent implements OnInit {
           for (let lang in result.data['current-language-categories']) {
             if (result.data['current-language-categories'][lang].slug === rs) {
               this.storage.set('languageISpeakText', result.data['current-language-categories'][lang].name).then( name => {
-                    console.log(name);
+                    this.dataBetweenCompService.textForFirstPage.next(name);
                   }
               );
             }

@@ -2,6 +2,7 @@ import {Component, OnInit, Renderer2, ViewChild} from '@angular/core';
 import { Storage } from '@ionic/storage';
 import {LoadingService} from '../../services/loading.service';
 import {PlayerService} from '../../services/player.service';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 @Component({
   selector: 'app-player',
@@ -27,13 +28,19 @@ export class PlayerPage implements OnInit {
       private rend: Renderer2,
       private storage: Storage,
       private loadService: LoadingService,
-      private playerService: PlayerService
+      private playerService: PlayerService,
+      private screenOrientation: ScreenOrientation
   ) { }
 
   ngOnInit() {
     this.storage.get('videoId').then((videoId: string) => {
       this.id = videoId;
     });
+    // this.screenOrientation.onChange().subscribe(
+    //     () => {
+    //       console.log("Orientation Changed");
+    //     }
+    // );
     screen.orientation.addEventListener('change', () => {
       this.loadService.subject.next(1);
       this.player.setSize(document.body.offsetHeight + 25, document.body.offsetWidth - 22);

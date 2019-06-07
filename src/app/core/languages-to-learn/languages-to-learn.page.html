@@ -20,6 +20,7 @@
     <ion-row *ngFor="let lang of languagesToLearn">
       <ion-col>
         <div class="one-of-lang-to-learn" (click)="oneLangClick($event)">
+          <input type="hidden"  value="{{lang.id}}">
           {{lang.name}}
           </div>
       </ion-col>

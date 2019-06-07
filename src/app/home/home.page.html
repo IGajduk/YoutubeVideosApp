@@ -1,15 +1,46 @@
-<div class="main">
 
-  <img class="logo" src="assets/images/logo.png" class="logo"/>
+<ion-app>
+  <div class="main" main>
 
-  <div class="centre-page">
-    <h1 class="h1-main">
-      {{textHeaderMain}}
-    </h1>
-    <div class="under-main-btn flip-scale-up-hor" (click)="showLanguagesMenu()"><span>{{textBtnUnderHeaderText}} </span><ion-icon name="arrow-dropdown" class="icon-choose-lang"></ion-icon></div>
-    <p class="under-main-txt">{{textUnderHeaderText}}</p>
+    <img class="logo" src="assets/images/logo.png" class="logo"/>
+
+    <div class="centre-page">
+      <h1 class="h1-main" (click)="openEnd()">
+        {{textHeaderMain}}
+      </h1>
+      <div class="under-main-btn flip-scale-up-hor" (click)="showLanguagesMenu()"><span>{{textBtnUnderHeaderText}} </span><ion-icon name="arrow-dropdown" class="icon-choose-lang"></ion-icon></div>
+      <p class="under-main-txt">{{textUnderHeaderText}}</p>
+    </div>
   </div>
-</div>
+  <ion-menu side="end" type="reveal">
+    <ion-header>
+      <ion-toolbar color="danger">
+        <ion-title>End Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!--<div class="ion-page" main>-->
+    <!--<ion-header>-->
+      <!--<ion-toolbar>-->
+        <!--<ion-buttons slot="start">-->
+          <!--<ion-menu-button></ion-menu-button>-->
+        <!--</ion-buttons>-->
+        <!--<ion-title>Home</ion-title>-->
+      <!--</ion-toolbar>-->
+    <!--</ion-header>-->
+
+  <!--</div>-->
+</ion-app>
 
     <app-languages-i-speak #languagesISpeak></app-languages-i-speak>
 

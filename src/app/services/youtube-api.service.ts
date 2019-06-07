@@ -7,7 +7,7 @@ import {ApiYoutubeVideoResponse} from '../models/ApiYoutubeVideoResponse';
   providedIn: 'root'
 })
 export class YoutubeAPIService {
-  apiKey = 'AIzaSyAURMLbKPCyDAgUHzZT6UtERdn6hPW38wk';
+  apiKey = 'AIzaSyAOeuWCU4ta22o0MJl6kllcgO3j7-heIBc';
   constructor(
       private httpClient: HttpClient,
   ) { }
